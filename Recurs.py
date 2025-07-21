@@ -23,7 +23,10 @@ def Fibo(n):
     else:
         return n + Fibo(n-2)
 def Back(List):
-
+    if len(List) == 0:
+        return " "
+    else:
+        return Back(List[1]) + List[0]
 def Power(B,Ex):
     if Ex == 0:
         return 1
@@ -60,7 +63,8 @@ try:
             case 5:
                 word = input("Ingrese una palabra de texto: ")
                 parts = list(word)
-                print(Back(parts,0))
+                inverted = back(parts)
+                print(inverted)
             case 6:
                base = int(input("Ingrese la base: "))
                if base <= 0:
