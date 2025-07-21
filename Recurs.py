@@ -63,7 +63,7 @@ try:
             case 5:
                 word = input("Ingrese una palabra de texto: ")
                 parts = list(word)
-                inverted = back(parts)
+                inverted = Back(parts)
                 print(inverted)
             case 6:
                base = int(input("Ingrese la base: "))
