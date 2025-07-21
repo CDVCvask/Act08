@@ -27,8 +27,11 @@ def Find(Parts,count,letter):
         return count
     else:
         if letter == Parts[0]:
-            cont = cont + 1
-        return Find(Parts[1:],cont,letter)
+            count = count + 1
+            return Find(Parts[1:], count, letter)
+        else:
+            count = count
+            return Find(Parts[1:],count,letter)
 def Back(List):
     if len(List) == 0:
         return ""
@@ -67,7 +70,8 @@ try:
                 word = input("Ingrese una palabra de texto: ")
                 look = input("Ingrese la letra para ver cuántas veces se repite: ")
                 parts = list(word)
-                print(Look(parts,0,look))
+                counter = Find(parts,0,look)
+                print(counter)
             case 5:
                 word = input("Ingrese una palabra de texto: ")
                 parts = list(word)
