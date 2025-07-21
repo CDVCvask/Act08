@@ -19,9 +19,14 @@ def Nat(n):
         return n + Nat(n-1)
 def Fibo(n):
     if n == 0:
-        return 1
+        return 0
     else:
         return n + Fibo(n-1)
+def Power(B,Ex):
+    if Ex == 0:
+        return 1
+    else:
+        return B * Power(B,Ex-1)
 allow = False
 try:
     while allow == False:
@@ -41,13 +46,25 @@ try:
                 else:
                     print(Nat(number))
             case 3:
-                print("Inicio")
+                number = int(input("Ingrese el número para ver su fibbonacci: "))
+                if number < 0:
+                    print("El valor ingresado no es valido")
+                else:
+                    print(Fibo(number))
             case 4:
                 print("Inicio")
             case 5:
                 print("Inicio")
             case 6:
-                print("Inicio")
+               base = int(input("Ingrese la base: "))
+               if base <= 0:
+                   print("El valor ingresado no es valido")
+               else:
+                    ex = int(input("Ingrese la exponente: "))
+                    if ex <= 0:
+                        print("El valor ingresado no es valido")
+                    else:
+                        print(Power(base,ex))
             case 7:
                 print("Gracias por utilizar el programa")
                 break
