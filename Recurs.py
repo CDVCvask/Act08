@@ -18,10 +18,12 @@ def Nat(n):
     else:
         return n + Nat(n-1)
 def Fibo(n):
-    if n <= 0:
+    if n == 0:
         return 0
+    elif n == 1:
+        return 1
     else:
-        return n + Fibo(n-2)
+        return Fibo(n-1) + Fibo(n-2)
 def Find(Parts,count,letter):
     if len(Parts) == 0:
         return count
