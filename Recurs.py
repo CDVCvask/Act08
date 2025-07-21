@@ -26,7 +26,7 @@ def Find(Parts,count,letter):
     if len(Parts) == 0:
         return count
     else:
-        if letter == Parts[0]:
+        if letter.lower() == Parts[0].lower():
             count = count + 1
             return Find(Parts[1:], count, letter)
         else:
