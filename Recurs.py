@@ -52,9 +52,9 @@ try:
                 else:
                     print(Fibo(number))
             case 4:
-                print("Inicio")
+                word = input("Ingrese una palabra de texto: ")
             case 5:
-                print("Inicio")
+                word = input("Ingrese una palabra de texto: ")
             case 6:
                base = int(input("Ingrese la base: "))
                if base <= 0:
