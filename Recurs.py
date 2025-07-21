@@ -22,6 +22,13 @@ def Fibo(n):
         return 0
     else:
         return n + Fibo(n-2)
+def Find(Parts,count,letter):
+    if len(Parts) == 0:
+        return count
+    else:
+        if letter == Parts[0]:
+            cont = cont + 1
+        return Find(Parts[1:],cont,letter)
 def Back(List):
     if len(List) == 0:
         return ""
