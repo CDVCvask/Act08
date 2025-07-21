@@ -67,6 +67,7 @@ try:
                 word = input("Ingrese una palabra de texto: ")
                 look = input("Ingrese la letra para ver cuántas veces se repite: ")
                 parts = list(word)
+                print(Look(parts,0,look))
             case 5:
                 word = input("Ingrese una palabra de texto: ")
                 parts = list(word)
