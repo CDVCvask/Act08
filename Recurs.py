@@ -22,11 +22,8 @@ def Fibo(n):
         return 0
     else:
         return n + Fibo(n-2)
-def Back(List,n):
-    if n == len(List):
-        return list[n]
-    else:
-        return Back(List,n-1) + List[n]
+def Back(List):
+
 def Power(B,Ex):
     if Ex == 0:
         return 1
@@ -63,7 +60,7 @@ try:
             case 5:
                 word = input("Ingrese una palabra de texto: ")
                 parts = list(word)
-
+                print(Back(parts,0))
             case 6:
                base = int(input("Ingrese la base: "))
                if base <= 0:
