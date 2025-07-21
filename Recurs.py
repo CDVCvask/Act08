@@ -18,10 +18,10 @@ def Nat(n):
     else:
         return n + Nat(n-1)
 def Fibo(n):
-    if n == 0:
+    if n <= 0:
         return 0
     else:
-        return n + Fibo(n-1)
+        return n + Fibo(n-2)
 def Power(B,Ex):
     if Ex == 0:
         return 1
